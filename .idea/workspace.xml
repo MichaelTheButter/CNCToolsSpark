@@ -4,18 +4,116 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add xml file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadBitsBitsTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadSandvikTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/BitsBits Fusion Tool Library.V1.3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/gtc_class_hierarchy_vendor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/package_assortment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5721237.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5721242.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5721466.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726309.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726322.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726326.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726451.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726524.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726539.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726729.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726753.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726757.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726770.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727176.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727179.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727293.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727649.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727722.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5728005.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5728007.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5743567.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5743819.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5752339.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5760404.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5760406.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5760427.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5760442.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5781777.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5782683.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5961306.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5961364.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6070058.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6162355.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6241359.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6259420.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6259910.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6266879.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6408341.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6424094.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6846039.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6851018.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6878201.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/7564305.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/7564330.p21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202161109_d50_0_4~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423109_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423327_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423359_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423385_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423456_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423571_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423768_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423769_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423944_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424101_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424129_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424173_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424207_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424915_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424991_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202426575_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202426600_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202426884_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202426942_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202427016_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202427044_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202427080_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202647883_d50_0_3~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202652674_d50_0_4~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202883180_d50_0_0~tl04_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203064317_d50_0_1~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203083937_d50_0_1~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203083948_d50_0_1~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203083995_d50_0_1~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203839169_d50_0_0~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203848289_d50_0_0~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203859109_d50_0_1~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203999906_d50_0_0~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/204021781_d50_0_0~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/204024337_d50_0_0~tl04_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/204155852_d50_0_0~tl04_04.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cd_catalog.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -27,26 +125,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/micha/Desktop/D/Edu/Java/CNCToolsSpark&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "initBranch",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/micha/Desktop/D/Edu/Java/CNCToolsSpark",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\micha\Desktop\D\Edu\Java\CNCToolsSpark\src\main\resources\sandvikTools" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application">
-      <output_file path="C:\Users\micha\Desktop\D\Edu\Java\CNCToolsSpark\output.txt" is_save="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../../Program Files/Java/jdk-11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <output_file path="C:\Users\micha\Desktop\D\Edu\Java\CNCToolsSpark\output.txt" />
       <option name="MAIN_CLASS_NAME" value="org.cncTools.App" />
       <module name="CNCToolsSpark" />
       <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
@@ -67,10 +172,39 @@
       <workItem from="1709154126920" duration="265000" />
       <workItem from="1709219848770" duration="2907000" />
       <workItem from="1709222775180" duration="3778000" />
+      <workItem from="1709287688461" duration="161000" />
+      <workItem from="1709288585240" duration="343000" />
+      <workItem from="1709314930000" duration="7150000" />
+      <workItem from="1709322572891" duration="136000" />
+      <workItem from="1709411366287" duration="8720000" />
+      <workItem from="1709420996051" duration="34000" />
+      <workItem from="1709484636912" duration="12369000" />
+      <workItem from="1709570815164" duration="4247000" />
     </task>
+    <task id="LOCAL-00001" summary="add xml file">
+      <option name="closed" value="true" />
+      <created>1709287803027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709287803027</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add xml file">
+      <option name="closed" value="true" />
+      <created>1709288879500</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709288879500</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add xml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add xml file" />
   </component>
 </project>
