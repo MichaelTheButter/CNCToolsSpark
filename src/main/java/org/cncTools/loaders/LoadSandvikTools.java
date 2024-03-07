@@ -30,7 +30,8 @@ public class LoadSandvikTools {
                         "left")
                 .join(images,
                         productDataDF.col("picture").contains(images.col("image_name"))
-                        , "left");
+                        , "left")
+                .drop(col("name"), col("picture"));
     }
 
     private Dataset<Row> loadSandvikPackage() {
@@ -70,6 +71,9 @@ public class LoadSandvikTools {
                 option("wholetext", "true")
                 .text("src/main/resources/sandvikTools/product_data_files")
                 .withColumn("name", regexp_extract(col("value"), "/\\*\\sname\\s\\*/\\s'[0-9]+.p21'", 0))
-                .withColumn("picture", regexp_extract(col("value"), "product_picture[(\\s+|[$,:/;#=()'~a-zA-Z0-9._%+-]+)]+jpg", 0));
+                .withColumn("picture", regexp_extract(col("value"), "product_picture[(\\s+|[$,:/;#=()'~a-zA-Z0-9._%+-]+)]+jpg", 0))
+                .withColumn("body_diameter", regexp_extract(col("value"), "body\\sdiameter[(\\s|[$,:/#='~a-zA-Z0-9._%+-]+)]+'\\);", 0))
+                .withColumn("body_length", regexp_extract(col("value"), "body\\slength[(\\s|[$,:/#='~a-zA-Z0-9._%+-]+)]+'\\);", 0))
+                .drop(col("value"));
     }
 }

@@ -4,97 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add xml file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadBitsBitsTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadSandvikTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/BitsBits Fusion Tool Library.V1.3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/gtc_class_hierarchy_vendor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/package_assortment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5721237.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5721242.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5721466.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726309.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726322.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726326.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726451.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726524.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726539.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726729.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726753.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726757.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5726770.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727176.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727179.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727293.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727649.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5727722.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5728005.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5728007.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5743567.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5743819.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5752339.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5760404.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5760406.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5760427.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5760442.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5781777.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5782683.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5961306.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/5961364.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6070058.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6162355.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6241359.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6259420.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6259910.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6266879.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6408341.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6424094.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6846039.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6851018.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/6878201.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/7564305.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_data_files/7564330.p21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202161109_d50_0_4~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423109_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423327_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423359_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423385_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423456_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423571_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423768_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423769_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202423944_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424101_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424129_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424173_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424207_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424915_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202424991_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202426575_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202426600_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202426884_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202426942_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202427016_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202427044_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202427080_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202647883_d50_0_3~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202652674_d50_0_4~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/202883180_d50_0_0~tl04_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203064317_d50_0_1~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203083937_d50_0_1~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203083948_d50_0_1~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203083995_d50_0_1~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203839169_d50_0_0~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203848289_d50_0_0~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203859109_d50_0_1~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/203999906_d50_0_0~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/204021781_d50_0_0~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/204024337_d50_0_0~tl04_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sandvikTools/product_pictures/204155852_d50_0_0~tl04_04.jpg" afterDir="false" />
+    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add data files and loaders">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cd_catalog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadSandvikTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadSandvikTools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +94,13 @@
       <workItem from="1709411366287" duration="8720000" />
       <workItem from="1709420996051" duration="34000" />
       <workItem from="1709484636912" duration="12369000" />
-      <workItem from="1709570815164" duration="4247000" />
+      <workItem from="1709570815164" duration="4890000" />
+      <workItem from="1709668710593" duration="6211000" />
+      <workItem from="1709749465384" duration="4796000" />
+      <workItem from="1709754361185" duration="21000" />
+      <workItem from="1709828104670" duration="6117000" />
+      <workItem from="1709834290852" duration="1493000" />
+      <workItem from="1709835813953" duration="736000" />
     </task>
     <task id="LOCAL-00001" summary="add xml file">
       <option name="closed" value="true" />
@@ -197,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709288879500</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add data files and loaders">
+      <option name="closed" value="true" />
+      <created>1709575112768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709575112768</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +134,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add xml file" />
+    <MESSAGE value="add data files and loaders" />
+    <option name="LAST_COMMIT_MESSAGE" value="add data files and loaders" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cncTools/App.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
