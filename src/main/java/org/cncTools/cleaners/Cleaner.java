@@ -6,6 +6,7 @@ import org.apache.spark.sql.types.DataType;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.MapType;
 import org.apache.spark.sql.types.StringType;
+import org.cncTools.UnionSchema;
 import scala.collection.JavaConverters;
 import scala.collection.immutable.Seq;
 
@@ -21,33 +22,46 @@ public class Cleaner {
 
     public Dataset<Row> cleanSandvik(Dataset<Row> df) {
         return df.drop(col("document_list"), col("mapping_rule"), col("p21_structure_change_timestamp"), col("p21_value_change_timestamp"))
-                .withColumn("description", col("preferred_name").cast(DataTypes.StringType))
-                .drop(col("preferred_name"))
-                .withColumn("description", regexp_replace(col("description"), "[\\[\\]]", ""))
-                .withColumn("modified_date", col("modified_date").cast(DataTypes.TimestampType))
-                .withColumn("product_id", col("product_id").cast(DataTypes.StringType))
-                .withColumn("parent_class", col("node_name").cast(DataTypes.StringType))
-                .withColumnRenamed("p21_file_url", "file_url")
-                .withColumn("additional_info", to_json(struct(col("gtc_generic_class_id"), col("gtc_generic_version"), col("gtc_vendor_class_id"), col("p21_file_name"), col("id"), col("parent_id"))))
-                .drop("gtc_generic_class_id", "preferred_name", "gtc_generic_version", "gtc_vendor_class_id", "p21_file_name", "id", "node_name", "parent_id");
+                .withColumn(UnionSchema.DESCRIPTION, col(UnionSchema.DESCRIPTION).cast(DataTypes.StringType))
+                .withColumn(UnionSchema.DESCRIPTION, regexp_replace(col(UnionSchema.DESCRIPTION), "[\\[\\]]", ""))
+                .withColumn(UnionSchema.MODIFIED_DATE, col(UnionSchema.MODIFIED_DATE).cast(DataTypes.TimestampType))
+                .withColumn(UnionSchema.PRODUCT_ID, col(UnionSchema.PRODUCT_ID).cast(DataTypes.StringType))
+                .withColumn(UnionSchema.PARENT_CLASS, col(UnionSchema.PARENT_CLASS).cast(DataTypes.StringType))
+                .withColumn(UnionSchema.VERSION, col("gtc_generic_version"))
+                .withColumnRenamed("p21_file_url", UnionSchema.FILE_URL)
+                .withColumn(UnionSchema.BODY_DIAMETER, regexp_extract(col(UnionSchema.BODY_DIAMETER), "'[0-9.]+'", 0))
+                .withColumn(UnionSchema.BODY_DIAMETER, regexp_replace(col(UnionSchema.BODY_DIAMETER), "[']", "")
+                        .cast(DataTypes.DoubleType))
+                .withColumn(UnionSchema.BODY_LENGTH, regexp_extract(col(UnionSchema.BODY_LENGTH), "'[0-9.]+'", 0))
+                .withColumn(UnionSchema.BODY_LENGTH, regexp_replace(col(UnionSchema.BODY_LENGTH), "[']", "")
+                        .cast(DataTypes.DoubleType))
+                .withColumn(UnionSchema.PRODUCER, lit("sandvik"))
+                .withColumn(UnionSchema.ADDITIONAL_INFO, to_json(struct(col("gtc_generic_class_id"), col("gtc_vendor_class_id"), col("p21_file_name"), col("id"), col("parent_id"))))
+                .drop("gtc_generic_class_id", "preferred_name", "gtc_vendor_class_id", "p21_file_name", "id", "node_name", "parent_id", "gtc_generic_version");
     }
 
     public Dataset<Row> cleanBitsBits(Dataset<Row> df) {
-        List<String> list = List.of("guid", "type", "unit", "GRADE", "holder", "`product-id`", "`product-link`", "`post-process`", "`start-values`", "vendor");
-        Seq<String> stringSeq = scala.collection.JavaConverters.asScalaIteratorConverter(list.iterator()).asScala().toSeq();
+        List<String> fieldsToDrop = List.of("guid", "type", "unit", "GRADE", "holder", "`product-id`", "`product-link`", "`post-process`", "`start-values`", "vendor");
+        Seq<String> stringSeq = scala.collection.JavaConverters
+                .asScalaIteratorConverter(
+                        fieldsToDrop.iterator())
+                .asScala()
+                .toSeq();
         int milliSecToSecDivisor = 1000;
-        return df.withColumn("product_id", col("data.product-id"))
-                .withColumn("modified_date", from_unixtime(col("data.holder.last_modified")
+
+        return df.withColumn(UnionSchema.PRODUCT_ID, col("data.product-id"))
+                .withColumn(UnionSchema.MODIFIED_DATE, from_unixtime(col("data.holder.last_modified")
                         .divide(milliSecToSecDivisor))
                         .cast(DataTypes.TimestampType))
-                .withColumn("file_url", col("data.product-link"))
-                .withColumn("unit_system", col("data.unit"))
-                .withColumn("description", col("data.type"))
-                .withColumn("parent_class", col("data.GRADE"))
-                .withColumn("body_diameter", col("data.geometry.DC"))
-                .withColumn("tool_length", col("data.geometry.LCF"))
+                .withColumn(UnionSchema.FILE_URL, col("data.product-link"))
+                .withColumn(UnionSchema.UNIT_SYSTEM, col("data.unit"))
+                .withColumn(UnionSchema.DESCRIPTION, col("data.type"))
+                .withColumn(UnionSchema.PARENT_CLASS, col("data.GRADE"))
+                .withColumn(UnionSchema.BODY_DIAMETER, col("data.geometry.DC"))
+                .withColumn(UnionSchema.BODY_LENGTH, col("data.geometry.LCF"))
                 .withColumn("data", col("data").dropFields(stringSeq))
-                .withColumn("additional_info", to_json(col("data")))
+                .withColumn(UnionSchema.ADDITIONAL_INFO, to_json(col("data")))
+                .withColumn(UnionSchema.PRODUCER, lit("bitsBits"))
                 .drop(col("data"));
     }
 }

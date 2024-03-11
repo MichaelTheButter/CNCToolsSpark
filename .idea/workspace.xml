@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add data files and loaders">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" afterDir="false" />
+    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add cleaner">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/UnionSchema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolAnalyser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/BitsBitsToolsLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/SandvikToolsLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/UnionLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadSandvikTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadSandvikTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadBitsBitsTools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadSandvikTools.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,23 +48,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "initBranch",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/micha/Desktop/D/Edu/Java/CNCToolsSpark",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;initBranch&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/micha/Desktop/D/Edu/Java/SparkPractice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\micha\Desktop\D\Edu\Java\CNCToolsSpark\src\main\resources\sandvikTools" />
@@ -100,7 +109,12 @@
       <workItem from="1709754361185" duration="21000" />
       <workItem from="1709828104670" duration="6117000" />
       <workItem from="1709834290852" duration="1493000" />
-      <workItem from="1709835813953" duration="736000" />
+      <workItem from="1709835813953" duration="1045000" />
+      <workItem from="1709921774902" duration="3584000" />
+      <workItem from="1709925405464" duration="1133000" />
+      <workItem from="1709990123987" duration="4756000" />
+      <workItem from="1710146246490" duration="3665000" />
+      <workItem from="1710150824908" duration="1814000" />
     </task>
     <task id="LOCAL-00001" summary="add xml file">
       <option name="closed" value="true" />
@@ -126,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709575112768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add cleaner">
+      <option name="closed" value="true" />
+      <created>1709836782152</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709836782152</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,17 +157,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add xml file" />
     <MESSAGE value="add data files and loaders" />
-    <option name="LAST_COMMIT_MESSAGE" value="add data files and loaders" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cncTools/App.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add cleaner" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cleaner" />
   </component>
 </project>

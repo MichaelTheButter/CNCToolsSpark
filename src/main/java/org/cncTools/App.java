@@ -3,12 +3,11 @@ package org.cncTools;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
-import org.apache.spark.ml.source.image.*;
+import org.cncTools.analysers.ToolAnalyser;
 import org.cncTools.cleaners.Cleaner;
-import org.cncTools.loaders.LoadBitsBitsTools;
-import org.cncTools.loaders.LoadSandvikTools;
-
-import static org.apache.spark.sql.functions.*;
+import org.cncTools.loaders.BitsBitsToolsLoader;
+import org.cncTools.loaders.SandvikToolsLoader;
+import org.cncTools.loaders.UnionLoader;
 
 public class App {
     public static void main( String[] args ) {
@@ -17,35 +16,23 @@ public class App {
                 .master("local[*]")
                 .getOrCreate();
 
-        LoadSandvikTools loader = new LoadSandvikTools(sparkSession);
+        SandvikToolsLoader loader = new SandvikToolsLoader(sparkSession);
         Dataset<Row> df = loader.loadJoinedSandvikCatalog();
-//        df.show();
-//        df.printSchema();
 
-        LoadBitsBitsTools bbloader = new LoadBitsBitsTools(sparkSession);
-        Dataset<Row> df2 = bbloader.loadBitsBits();
-
-//        df2.show();
-//        df2.printSchema();
+        BitsBitsToolsLoader bbloader = new BitsBitsToolsLoader(sparkSession);
+        Dataset<Row> df2 = bbloader.loadJoinedBitsCatalog();
 
         Cleaner cleaner = new Cleaner();
         Dataset<Row> df3 = cleaner.cleanSandvik(df);
-        df3.show();
-        df3.printSchema();
-
         Dataset<Row> df4 = cleaner.cleanBitsBits(df2);
-        df4.show();
-        df4.printSchema();
 
-        df4.groupBy(col("description")).count().show();
-        df4.groupBy(col("modified_date")).count().show();
+        UnionLoader unionLoader = new UnionLoader();
+        Dataset<Row> df5 = unionLoader.loadUnion(df3, df4);
+        df5.show();
+        df5.printSchema();
 
-//        Dataset<Row> df5 = cleaner.getUnionTools(df3, df4);
-//        df5.show();
-//        df5.printSchema();
-
-
-
-
+        ToolAnalyser analyser = new ToolAnalyser(sparkSession);
+        analyser.calculateDiamRangeByDescriptions(df5).show();
+        analyser.calculateByDiameter(df5).show();
     }
 }
