@@ -32,12 +32,13 @@ public class ToolAnalyser {
      * @return Dataframe wirth columns body_diameter, count, unit_system
      */
     public Dataset<Row> calculateByDiameter(Dataset<Row> df) {
+        String diameterColAlias = "diam";
         return df.groupBy(UnionSchema.BODY_DIAMETER).count()
                 .join(
-                        df.select(df.col(UnionSchema.BODY_DIAMETER).as("diam"), df.col(UnionSchema.UNIT_SYSTEM)),
-                        col(UnionSchema.BODY_DIAMETER).equalTo(col("diam")),
+                        df.select(df.col(UnionSchema.BODY_DIAMETER).as(diameterColAlias), df.col(UnionSchema.UNIT_SYSTEM)),
+                        col(UnionSchema.BODY_DIAMETER).equalTo(col(diameterColAlias)),
                 "inner")
-                .drop(col("diam"))
+                .drop(col(diameterColAlias))
                 .dropDuplicates();
     }
 }

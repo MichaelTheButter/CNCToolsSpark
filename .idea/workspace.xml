@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add cleaner">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/UnionSchema.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolAnalyser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/BitsBitsToolsLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/SandvikToolsLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/UnionLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadBitsBitsTools.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/LoadSandvikTools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +65,7 @@
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../../Program Files/Java/jdk-11" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <output_file path="C:\Users\micha\Desktop\D\Edu\Java\CNCToolsSpark\output.txt" />
       <option name="MAIN_CLASS_NAME" value="org.cncTools.App" />
@@ -83,6 +75,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -115,6 +114,8 @@
       <workItem from="1709990123987" duration="4756000" />
       <workItem from="1710146246490" duration="3665000" />
       <workItem from="1710150824908" duration="1814000" />
+      <workItem from="1710178017657" duration="276000" />
+      <workItem from="1710178443367" duration="4144000" />
     </task>
     <task id="LOCAL-00001" summary="add xml file">
       <option name="closed" value="true" />

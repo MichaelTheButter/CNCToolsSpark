@@ -4,6 +4,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.cncTools.analysers.ToolAnalyser;
+import org.cncTools.analysers.ToolSearch;
 import org.cncTools.cleaners.Cleaner;
 import org.cncTools.loaders.BitsBitsToolsLoader;
 import org.cncTools.loaders.SandvikToolsLoader;
@@ -17,22 +18,28 @@ public class App {
                 .getOrCreate();
 
         SandvikToolsLoader loader = new SandvikToolsLoader(sparkSession);
-        Dataset<Row> df = loader.loadJoinedSandvikCatalog();
+        Dataset<Row> sandvikRaw = loader.loadJoinedSandvikCatalog();
 
-        BitsBitsToolsLoader bbloader = new BitsBitsToolsLoader(sparkSession);
-        Dataset<Row> df2 = bbloader.loadJoinedBitsCatalog();
+        BitsBitsToolsLoader bitsLoader = new BitsBitsToolsLoader(sparkSession);
+        Dataset<Row> bitsRaw = bitsLoader.loadJoinedBitsCatalog();
 
         Cleaner cleaner = new Cleaner();
-        Dataset<Row> df3 = cleaner.cleanSandvik(df);
-        Dataset<Row> df4 = cleaner.cleanBitsBits(df2);
+        Dataset<Row> sandvikDF = cleaner.cleanSandvik(sandvikRaw);
+        Dataset<Row> bitsDF = cleaner.cleanBitsBits(bitsRaw);
 
         UnionLoader unionLoader = new UnionLoader();
-        Dataset<Row> df5 = unionLoader.loadUnion(df3, df4);
-        df5.show();
-        df5.printSchema();
+        Dataset<Row> cncToolsDF = unionLoader.loadUnion(sandvikDF, bitsDF);
+        cncToolsDF.show();
+        cncToolsDF.printSchema();
 
         ToolAnalyser analyser = new ToolAnalyser(sparkSession);
-        analyser.calculateDiamRangeByDescriptions(df5).show();
-        analyser.calculateByDiameter(df5).show();
+        analyser.calculateDiamRangeByDescriptions(cncToolsDF).show();
+        analyser.calculateByDiameter(sandvikDF).show();
+
+        ToolSearch searcher = new ToolSearch(sparkSession);
+        String[] keyWords = {"drill", "flat"};
+        searcher.searchByKeyWords(cncToolsDF, keyWords).show();
+        searcher.searchBodyDiameterLeq(cncToolsDF, 50).show(60);
+        searcher.searchBodyLengthGeq(bitsDF, 40).show();
     }
 }
