@@ -15,6 +15,12 @@
 
   <dependencies>
 
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-mllib_2.13</artifactId>
+      <version>3.5.0</version>
+      <scope>provided</scope>
+    </dependency>
 
     <dependency>
       <groupId>org.apache.spark</groupId>
@@ -29,16 +35,11 @@
       <version>3.5.0</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.apache.spark</groupId>
-      <artifactId>spark-mllib_2.13</artifactId>
-      <version>3.5.0</version>
-    </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs -->
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-hdfs</artifactId>
-      <version>3.3.6</version>
+      <version>2.2.0</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.databricks/spark-xml -->

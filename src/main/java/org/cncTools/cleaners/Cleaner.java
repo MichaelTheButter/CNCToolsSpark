@@ -2,12 +2,9 @@ package org.cncTools.cleaners;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
-import org.apache.spark.sql.types.DataType;
 import org.apache.spark.sql.types.DataTypes;
-import org.apache.spark.sql.types.MapType;
-import org.apache.spark.sql.types.StringType;
+import org.cncTools.SandvikSchema;
 import org.cncTools.UnionSchema;
-import scala.collection.JavaConverters;
 import scala.collection.immutable.Seq;
 
 import java.util.List;
@@ -15,29 +12,30 @@ import java.util.List;
 import static org.apache.spark.sql.functions.*;
 
 public class Cleaner {
+    static final int MILLISEC_TO_SEC_DIVISOR = 1000;
 
     public Dataset<Row> getUnionTools(Dataset<Row> df, Dataset<Row> df2){
         return df.unionByName(df2);
     }
 
     public Dataset<Row> cleanSandvik(Dataset<Row> df) {
-        return df.drop(col("document_list"), col("mapping_rule"), col("p21_structure_change_timestamp"), col("p21_value_change_timestamp"))
+        return df.drop(col(SandvikSchema.DOCUMENT_LIST), col(SandvikSchema.MAPPING_RULE), col(SandvikSchema.P21_STRUCTURE_CHANGE_TIMEsTAMP), col(SandvikSchema.P21_VALUE_CHANGE_TIMESTAMP))
                 .withColumn(UnionSchema.DESCRIPTION, col(UnionSchema.DESCRIPTION).cast(DataTypes.StringType))
                 .withColumn(UnionSchema.DESCRIPTION, regexp_replace(col(UnionSchema.DESCRIPTION), "[\\[\\]]", ""))
                 .withColumn(UnionSchema.MODIFIED_DATE, col(UnionSchema.MODIFIED_DATE).cast(DataTypes.TimestampType))
                 .withColumn(UnionSchema.PRODUCT_ID, col(UnionSchema.PRODUCT_ID).cast(DataTypes.StringType))
                 .withColumn(UnionSchema.PARENT_CLASS, col(UnionSchema.PARENT_CLASS).cast(DataTypes.StringType))
-                .withColumn(UnionSchema.VERSION, col("gtc_generic_version"))
-                .withColumnRenamed("p21_file_url", UnionSchema.FILE_URL)
+                .withColumn(UnionSchema.VERSION, col(SandvikSchema.GTC_GENERIC_VERSION))
+                .withColumnRenamed(SandvikSchema.P21_FILE_URL, UnionSchema.FILE_URL)
                 .withColumn(UnionSchema.BODY_DIAMETER, regexp_extract(col(UnionSchema.BODY_DIAMETER), "'[0-9.]+'", 0))
                 .withColumn(UnionSchema.BODY_DIAMETER, regexp_replace(col(UnionSchema.BODY_DIAMETER), "[']", "")
                         .cast(DataTypes.DoubleType))
                 .withColumn(UnionSchema.BODY_LENGTH, regexp_extract(col(UnionSchema.BODY_LENGTH), "'[0-9.]+'", 0))
                 .withColumn(UnionSchema.BODY_LENGTH, regexp_replace(col(UnionSchema.BODY_LENGTH), "[']", "")
                         .cast(DataTypes.DoubleType))
-                .withColumn(UnionSchema.PRODUCER, lit("sandvik"))
-                .withColumn(UnionSchema.ADDITIONAL_INFO, to_json(struct(col("gtc_generic_class_id"), col("gtc_vendor_class_id"), col("p21_file_name"), col("id"), col("parent_id"))))
-                .drop("gtc_generic_class_id", "preferred_name", "gtc_vendor_class_id", "p21_file_name", "id", "node_name", "parent_id", "gtc_generic_version");
+                .withColumn(UnionSchema.PRODUCER, lit(SandvikSchema.PRODUCER_NAME))
+                .withColumn(UnionSchema.ADDITIONAL_INFO, to_json(struct(col(SandvikSchema.GTC_GENERIC_CLASS_ID), col(SandvikSchema.GTC_VENDOR_CLASS_ID), col(SandvikSchema.P21_FILE_NAME), col(SandvikSchema.ID), col(SandvikSchema.PARENT_ID))))
+                .drop(SandvikSchema.GTC_GENERIC_CLASS_ID, SandvikSchema.PREFERRED_NAME, SandvikSchema.GTC_VENDOR_CLASS_ID, SandvikSchema.P21_FILE_NAME, SandvikSchema.ID, SandvikSchema.NODE_NAME, SandvikSchema.PARENT_ID, SandvikSchema.GTC_GENERIC_VERSION);
     }
 
     public Dataset<Row> cleanBitsBits(Dataset<Row> df) {
@@ -47,11 +45,10 @@ public class Cleaner {
                         fieldsToDrop.iterator())
                 .asScala()
                 .toSeq();
-        int milliSecToSecDivisor = 1000;
 
         return df.withColumn(UnionSchema.PRODUCT_ID, col("data.product-id"))
                 .withColumn(UnionSchema.MODIFIED_DATE, from_unixtime(col("data.holder.last_modified")
-                        .divide(milliSecToSecDivisor))
+                        .divide(MILLISEC_TO_SEC_DIVISOR))
                         .cast(DataTypes.TimestampType))
                 .withColumn(UnionSchema.FILE_URL, col("data.product-link"))
                 .withColumn(UnionSchema.UNIT_SYSTEM, col("data.unit"))

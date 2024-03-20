@@ -1,14 +1,11 @@
 package org.cncTools.analysers;
 
-import org.apache.spark.internal.config.R;
 import org.apache.spark.sql.Column;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.cncTools.UnionSchema;
-
 import java.util.Arrays;
-import java.util.Date;
 
 import static org.apache.spark.sql.functions.*;
 

@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add cleaner">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add bitsbits images">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/SandvikSchema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/UnionSchema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/UnionSchema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolAnalyser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/SandvikToolsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/SandvikToolsLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/UnionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/UnionLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +35,23 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MichaelTheButter"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4104d359-b5b0-4226-848f-e240f923cf2f" />
+        <option name="url" value="https://github.com/MichaelTheButter/CNCToolsSpark.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -62,26 +84,22 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\micha\Desktop\D\Edu\Java\CNCToolsSpark\src\main\resources\sandvikTools" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.cncTools" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-11" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../../Program Files/Java/jdk-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <output_file path="C:\Users\micha\Desktop\D\Edu\Java\CNCToolsSpark\output.txt" />
       <option name="MAIN_CLASS_NAME" value="org.cncTools.App" />
       <module name="CNCToolsSpark" />
-      <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+      <option name="VM_PARAMETERS" value="--add-exports&#10;java.base/sun.nio.ch=ALL-UNNAMED&#10;-Dhadoop.home.dir=$PROJECT_DIR$/../../../../../../../winutil" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -116,6 +134,9 @@
       <workItem from="1710150824908" duration="1814000" />
       <workItem from="1710178017657" duration="276000" />
       <workItem from="1710178443367" duration="4144000" />
+      <workItem from="1710367764412" duration="468000" />
+      <workItem from="1710368859362" duration="41000" />
+      <workItem from="1710949247585" duration="3719000" />
     </task>
     <task id="LOCAL-00001" summary="add xml file">
       <option name="closed" value="true" />
@@ -154,6 +175,23 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add xml file" />
