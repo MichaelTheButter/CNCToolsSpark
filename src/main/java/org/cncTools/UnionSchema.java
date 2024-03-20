@@ -17,6 +17,7 @@ public class UnionSchema {
     public static final String VERSION = "version";
     public static final String ADDITIONAL_INFO = "additional_info";
     public static final String PRODUCER = "producer";
-    public static final String DIAMETER_ALIAS = "diam";
+    public static final String DIAMETER_ALIAS = "diameter_[mm]";
+    public static final String LENGTH_ALIAS = "body_length_[mm]";
 
 }

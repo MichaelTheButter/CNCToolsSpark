@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add bitsbits images">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/BitsSchema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/UnionSchema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/UnionSchema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/BitsBitsToolsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/BitsBitsToolsLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "initBranch-2",
+    "git-widget-placeholder": "initBranch",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/micha/Desktop/D/Edu/Java/SparkPractice",
     "node.js.detected.package.eslint": "true",
@@ -189,6 +193,7 @@
     <MESSAGE value="add xml file" />
     <MESSAGE value="add data files and loaders" />
     <MESSAGE value="add cleaner" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cleaner" />
+    <MESSAGE value="add SandvikSchema" />
+    <option name="LAST_COMMIT_MESSAGE" value="add SandvikSchema" />
   </component>
 </project>

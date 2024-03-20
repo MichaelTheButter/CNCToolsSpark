@@ -3,6 +3,7 @@ package org.cncTools.cleaners;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.types.DataTypes;
+import org.cncTools.BitsSchema;
 import org.cncTools.SandvikSchema;
 import org.cncTools.UnionSchema;
 import scala.collection.immutable.Seq;
@@ -39,26 +40,26 @@ public class Cleaner {
     }
 
     public Dataset<Row> cleanBitsBits(Dataset<Row> df) {
-        List<String> fieldsToDrop = List.of("guid", "type", "unit", "GRADE", "holder", "`product-id`", "`product-link`", "`post-process`", "`start-values`", "vendor");
+        List<String> fieldsToDrop = List.of(BitsSchema.GUID, BitsSchema.TYPE, BitsSchema.UNIT, BitsSchema.GRADE, BitsSchema.HOLDER, BitsSchema.PRODUCT_ID, BitsSchema.PRODUCT_LINK,BitsSchema.POST_PROCESS, BitsSchema.START_VALUES, BitsSchema.VENDOR);
         Seq<String> stringSeq = scala.collection.JavaConverters
                 .asScalaIteratorConverter(
                         fieldsToDrop.iterator())
                 .asScala()
                 .toSeq();
 
-        return df.withColumn(UnionSchema.PRODUCT_ID, col("data.product-id"))
-                .withColumn(UnionSchema.MODIFIED_DATE, from_unixtime(col("data.holder.last_modified")
+        return df.withColumn(UnionSchema.PRODUCT_ID, col(BitsSchema.DATA_PRODUCT_ID))
+                .withColumn(UnionSchema.MODIFIED_DATE, from_unixtime(col(BitsSchema.LAST_MODIFIED)
                         .divide(MILLISEC_TO_SEC_DIVISOR))
                         .cast(DataTypes.TimestampType))
-                .withColumn(UnionSchema.FILE_URL, col("data.product-link"))
-                .withColumn(UnionSchema.UNIT_SYSTEM, col("data.unit"))
-                .withColumn(UnionSchema.DESCRIPTION, col("data.type"))
-                .withColumn(UnionSchema.PARENT_CLASS, col("data.GRADE"))
-                .withColumn(UnionSchema.BODY_DIAMETER, col("data.geometry.DC"))
-                .withColumn(UnionSchema.BODY_LENGTH, col("data.geometry.LCF"))
-                .withColumn("data", col("data").dropFields(stringSeq))
-                .withColumn(UnionSchema.ADDITIONAL_INFO, to_json(col("data")))
-                .withColumn(UnionSchema.PRODUCER, lit("bitsBits"))
-                .drop(col("data"));
+                .withColumn(UnionSchema.FILE_URL, col(BitsSchema.DATA_PRODUCT_LINK))
+                .withColumn(UnionSchema.UNIT_SYSTEM, col(BitsSchema.DATA_UNIT))
+                .withColumn(UnionSchema.DESCRIPTION, col(BitsSchema.DATA_TYPE))
+                .withColumn(UnionSchema.PARENT_CLASS, col(BitsSchema.DATA_GRADE))
+                .withColumn(UnionSchema.BODY_DIAMETER, col(BitsSchema.GEOMETRY_DC))
+                .withColumn(UnionSchema.BODY_LENGTH, col(BitsSchema.GEOMETRY_LCF))
+                .withColumn(BitsSchema.DATA, col(BitsSchema.DATA).dropFields(stringSeq))
+                .withColumn(UnionSchema.ADDITIONAL_INFO, to_json(col(BitsSchema.DATA)))
+                .withColumn(UnionSchema.PRODUCER, lit(BitsSchema.PRODUCER_NAME))
+                .drop(col(BitsSchema.DATA));
     }
 }

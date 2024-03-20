@@ -29,17 +29,19 @@ public class ToolSearch {
     }
 
     public Dataset<Row> searchBodyDiameterLeq(Dataset<Row> df, double diameter) {
-        return df.withColumn("diameter_[mm]", convertToMillimeters(col(UnionSchema.BODY_DIAMETER)))
-                .filter(col("diameter_[mm]").leq(diameter));
+        return df.withColumn(UnionSchema.DIAMETER_ALIAS, convertToMillimeters(col(UnionSchema.BODY_DIAMETER)))
+                .filter(col(UnionSchema.DIAMETER_ALIAS).leq(diameter));
     }
 
     public Dataset<Row> searchBodyLengthGeq(Dataset<Row> df, double body_length) {
-        return df.withColumn("body_length_[mm]", convertToMillimeters(col(UnionSchema.BODY_LENGTH)))
-                .filter(col("body_length_[mm]").geq(body_length));
+        return df.withColumn(UnionSchema.LENGTH_ALIAS, convertToMillimeters(col(UnionSchema.BODY_LENGTH)))
+                .filter(col(UnionSchema.LENGTH_ALIAS).geq(body_length));
     }
 
-    private Column convertToMillimeters(Column column) {
-        return when(col(UnionSchema.UNIT_SYSTEM).equalTo("inches"), column.multiply(25.4)).otherwise(column);
+    private Column convertToMillimeters(Column value) {
+        final String INCHES = "inches";
+        final double INCHES_TO_MM = 25.4;
+        return when(col(UnionSchema.UNIT_SYSTEM).equalTo(INCHES), value.multiply(INCHES_TO_MM)).otherwise(value);
     }
     private String arrayToString(String[] keyWords) {
         return Arrays.toString(keyWords)
