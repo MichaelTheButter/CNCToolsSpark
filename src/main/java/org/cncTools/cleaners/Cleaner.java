@@ -46,7 +46,6 @@ public class Cleaner {
                         fieldsToDrop.iterator())
                 .asScala()
                 .toSeq();
-
         return df.withColumn(UnionSchema.PRODUCT_ID, col(BitsSchema.DATA_PRODUCT_ID))
                 .withColumn(UnionSchema.MODIFIED_DATE, from_unixtime(col(BitsSchema.LAST_MODIFIED)
                         .divide(MILLISEC_TO_SEC_DIVISOR))
