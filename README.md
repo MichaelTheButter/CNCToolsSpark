@@ -29,6 +29,8 @@ Second subset, provided by Bitsbits contains:
 - create two dataframes, one for each producer
 - transform dataframes into consisten schema
 - union both dataframes into one common tools set, with schema as shown below.
+  
+![](/src/main/schema.png)
 
 
 ## Part 2
