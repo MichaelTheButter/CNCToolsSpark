@@ -1,6 +1,6 @@
 # Apache Spark Project
 ## Description
-In this project, I use Apache Spark to collect data from distinct cnc tools manufacturers, clean them, trnsform into consitent schema specify by tool managment system, and perform some basic analyze.
+In this project, I use Apache Spark to collect data from distinct cnc tools manufacturers, clean them, trnsform into consitent schema specified by tool managment system, and perform some basic analyze.
 
 ## Dataset preview
 Datasets are real life data provided by two, widly used, tools manufacturers. 
