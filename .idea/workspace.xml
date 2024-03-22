@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add bitsbits images">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/BitsSchema.java" afterDir="false" />
+    <list default="true" id="a41c021e-8d3e-4fdd-b0ed-f589ea70fc80" name="Changes" comment="add BitsSchema">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/collectors/Collector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/UnionSchema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/UnionSchema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/analysers/ToolSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/cleaners/Cleaner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/BitsBitsToolsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/loaders/BitsBitsToolsLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cncTools/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,24 +55,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "initBranch",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/micha/Desktop/D/Edu/Java/SparkPractice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;initBranch&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/micha/Desktop/D/Edu/Java/SparkPractice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\micha\Desktop\D\Edu\Java\CNCToolsSpark\src\main\resources\sandvikTools" />
@@ -133,6 +130,7 @@
       <workItem from="1710367764412" duration="468000" />
       <workItem from="1710368859362" duration="41000" />
       <workItem from="1710949247585" duration="3719000" />
+      <workItem from="1711106144459" duration="5633000" />
     </task>
     <task id="LOCAL-00001" summary="add xml file">
       <option name="closed" value="true" />
@@ -166,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709836782152</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add BitsSchema">
+      <option name="closed" value="true" />
+      <created>1710955268459</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710955268459</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +200,7 @@
     <MESSAGE value="add data files and loaders" />
     <MESSAGE value="add cleaner" />
     <MESSAGE value="add SandvikSchema" />
-    <option name="LAST_COMMIT_MESSAGE" value="add SandvikSchema" />
+    <MESSAGE value="add BitsSchema" />
+    <option name="LAST_COMMIT_MESSAGE" value="add BitsSchema" />
   </component>
 </project>

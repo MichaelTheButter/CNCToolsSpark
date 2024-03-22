@@ -6,9 +6,12 @@ import org.apache.spark.sql.SparkSession;
 import org.cncTools.analysers.ToolAnalyser;
 import org.cncTools.analysers.ToolSearch;
 import org.cncTools.cleaners.Cleaner;
+import org.cncTools.collectors.Collector;
 import org.cncTools.loaders.BitsBitsToolsLoader;
 import org.cncTools.loaders.SandvikToolsLoader;
 import org.cncTools.loaders.UnionLoader;
+
+import java.util.List;
 
 public class App {
     public static void main( String[] args ) {
@@ -30,18 +33,31 @@ public class App {
 
         UnionLoader unionLoader = new UnionLoader();
         Dataset<Row> cncToolsDF = unionLoader.loadUnion(sandvikDF, bitsDF);
-//        cncToolsDF.show();
-        cncToolsDF.printSchema();
+        Collector.saveAsParquet(cncToolsDF, "cncTools.parquet");
+
 
         ToolAnalyser analyser = new ToolAnalyser(sparkSession);
-//        analyser.calculateDiamRangeByDescriptions(cncToolsDF).show();
-//        analyser.calculateByDiameter(sandvikDF).show();
+        analyser.calculateDiamRangeByDescriptions(cncToolsDF).show();
+        Collector.saveAsCsv(
+                analyser.calculateDiamRangeByDescriptions(cncToolsDF),
+        "calcDiamRangeByDesc.csv"
+        );
+        Collector.saveAsCsv(
+                analyser.calculateByDiameter(sandvikDF),
+        "calcByDiameter.csv"
+        );
 
         ToolSearch searcher = new ToolSearch(sparkSession);
         String[] keyWords = {"drill", "flat"};
-//        searcher.searchByKeyWords(cncToolsDF, keyWords).show();
-//        searcher.searchBodyDiameterLeq(cncToolsDF, 50).show(60);
-//        searcher.searchBodyLengthGeq(bitsDF, 40).show();
-        //cncToolsDF.drop("image").write().format("csv").save("C:\\winutil\\sample.csv");
+        Collector.saveAsCsv(
+                searcher.searchByKeyWords(cncToolsDF, keyWords),
+        "searchByKeyWords.csv"
+        );
+
+        Collector.saveAsCsv(
+                searcher.searchBodyDiameterLeq(cncToolsDF, 50),
+                "searchByDiamGeq50.csv"
+        );
+
     }
 }
